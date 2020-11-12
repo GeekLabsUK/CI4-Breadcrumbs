@@ -1,6 +1,8 @@
 # CI4-Breadcrumbs
 Simple breadcrumb library for Codeigniter 4
 
+#Install 
+
 To install simply copy the Breadcrumbs.php file to your App\Libraries folder
 
 Out of the box breadcrumbs are set up using Bootstrap styles ie.
