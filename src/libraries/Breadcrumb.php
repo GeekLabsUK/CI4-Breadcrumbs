@@ -1,6 +1,6 @@
 <?php 
 
-namespace App\libraries;
+namespace Geeklabs\Breadcrumbs;
 
 class Breadcrumb {
 
