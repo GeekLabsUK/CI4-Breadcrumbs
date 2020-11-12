@@ -5,12 +5,14 @@ To install simply copy the Breadcrumbs.php file to your App\Libraries folder
 
 Out of the box breadcrumbs are set up using Bootstrap styles ie.
 
+```html
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="#">Home</a></li>
     <li class="breadcrumb-item active" aria-current="page">Library</li>
   </ol>
 </nav>
+```
 
 If you want to overide these styles, add additional classes etc you can do that in the __construct function of Breadcrumbs.php
 
