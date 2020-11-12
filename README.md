@@ -21,24 +21,33 @@ To use the library first load it into your controller
 ```
 use App\libraries\Breadcrumb;
 ```
+Create an instance
 
+```
 $this->breadcrumb = new Breadcrumb();
+```
 
 Build your breadcrumbs
 
+```php
  $this->breadcrumb->add('Home', '/');
  $this->breadcrumb->add('Dashboard', '/dashboard');  
  $this->breadcrumb->add('Customers', '/customers');  
+```
  
  ensure to include the / before your url
  
  Build the breadcrumbs using
  
+ ```
  $data['breadcrumbs'] = $this->breadcrumb->render();
+ ```
  
  Pass the data to your view and then 
  
+ ```
  <?php echo $breadcrumbs; ?>
+ ```
  
  
 
