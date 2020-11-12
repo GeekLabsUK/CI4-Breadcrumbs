@@ -1,7 +1,11 @@
 # CI4-Breadcrumbs
 Simple breadcrumb library for Codeigniter 4
 
-#Install 
+### Install Via Composer
+
+```
+composer require geeklabs/ci4-breadcrumbs
+```
 
 To install simply copy the Breadcrumbs.php file to your App\Libraries folder
 
