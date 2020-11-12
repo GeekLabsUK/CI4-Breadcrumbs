@@ -1,0 +1,9 @@
+{
+    "name": "GeekLabs/CI4-Breadcrumbs",
+    "type": "library",
+    "description": "Simple breadcrum library for Codeigniter 4",
+    "keywords": ["ci4","codeigniter","codeigniter 4","breadcrumbs"],
+    "homepage": "https://github.com/GeekLabsUK",
+    "license": "GNU"
+      
+}
