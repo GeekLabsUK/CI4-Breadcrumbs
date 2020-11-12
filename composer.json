@@ -4,6 +4,6 @@
     "description": "Simple breadcrum library for Codeigniter 4",
     "keywords": ["ci4","codeigniter","codeigniter 4","breadcrumbs"],
     "homepage": "https://github.com/GeekLabsUK",
-    "license": "GPL"
+    "license": "GPL-3.0-or-later"
       
 }
