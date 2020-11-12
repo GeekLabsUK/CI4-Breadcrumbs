@@ -1,5 +1,5 @@
 {
-    "name": "geeklabs/ci4-breadcrumbs",
+    "name": "geeklabs/breadcrumbs",
     "type": "library",
     "description": "Simple breadcrum library for Codeigniter 4",
     "keywords": ["ci4","codeigniter","codeigniter 4","breadcrumbs"],
