@@ -18,7 +18,9 @@ If you want to overide these styles, add additional classes etc you can do that 
 
 To use the library first load it into your controller
 
+```
 use App\libraries\Breadcrumb;
+```
 
 $this->breadcrumb = new Breadcrumb();
 
