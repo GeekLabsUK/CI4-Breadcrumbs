@@ -15,7 +15,7 @@
  * 
  */
 
-namespace App\libraries;
+namespace Geeklabs\Breadcrumbs;
 
 //use CodeIgniter\HTTP\URI;
 
