@@ -108,7 +108,8 @@ class Breadcrumb
 
             $path .= '/' . $crumb;
 
-            $name = ucfirst(str_replace(array(".php", "_"), array("", " "), $crumb));
+            $name = ucwords(str_replace(array(".php", "_"), array("", " "), $crumb));
+            $name = ucwords(str_replace('-', ' ', $name));
 
             if ($k != $count) {
 
