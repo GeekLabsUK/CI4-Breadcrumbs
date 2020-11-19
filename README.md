@@ -76,15 +76,13 @@ Then simply echo it out in your view
  ```
  Admin / Customer / Profile
  ```
+ So admin and customer must also have a route set for them.
+ 
  If you want your breadcrumbs to remain readable you can add a - in your URI segement to force a space ie
  
  ```
  edit-customer = Edit Customer
  ```
- 
- 
- 
- So admin and customer must also have a route set for them.
  
  ## Manual Build
  
