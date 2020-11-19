@@ -4,7 +4,7 @@
 Simple breadcrumb library for Codeigniter 4
 
 ## V2.0 Released
-You now have the options of either manually building your breadcrumbs or using the auto builder. The auto builder takes your URI string and breaks it doen into a bootstrap breadcrumb.
+You now have the options of either manually building your breadcrumbs or using the auto builder. The auto builder takes your URI string and breaks it down into a bootstrap breadcrumb.
 
 ### Install Via Composer
 
