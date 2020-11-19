@@ -68,9 +68,9 @@ Then simply echo it out in your view
  
  Well almost. Now your breadcrumbs are being generated automatically based on your URI you need to make some extra conciderations when you are building out your routes. For example if you have a route like 
  
- ```
+```
  $routes->add('admin/customers/profile', 'Controller::index')
- '''
+```
  your breadcrumb will be
  
  ```
