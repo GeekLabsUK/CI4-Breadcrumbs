@@ -20,7 +20,12 @@ use \Geeklabs\Breadcrumbs\Breadcrumb;
 
 ### Manual Install
 
-To install simply copy the Breadcrumbs.php file to your App\Libraries folder
+To install simply copy the Breadcrumbs.php file to your App\Libraries folder. By default CI4-Breadcrumbs uses the namespace Geeklabs\Breadcrumbs for composer installs.
+If you are manually installing please change the name space at teh top of the Breadcrumbs.php file to
+
+```
+App\Libraries
+```
 
 ### Usage
 
