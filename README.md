@@ -3,6 +3,9 @@
 # CI4-Breadcrumbs
 Simple breadcrumb library for Codeigniter 4
 
+## V2.0 Released
+You now have the options of either manually building your breadcrumbs or using the auto builder. The auto builder takes your URI string and breaks it down into a bootstrap breadcrumb.
+
 ### Install Via Composer
 
 ```
@@ -44,6 +47,23 @@ Create an instance
 ```
 $this->breadcrumb = new Breadcrumb();
 ```
+## Auto Build
+
+If you want simple breadcrumbs to auto build the breadcrumbs for you based on your URL you can do so by calling
+
+```
+$data['breadcrumbs'] = $this->breadcrumb->buildAuto();
+```
+Then simply echo it out in your view
+```
+ <?php echo $breadcrumbs; ?> 
+ ```
+ 
+ ### Done! That simple.
+ 
+ ## Manual Build
+ 
+ If you want a little bit more control over your breadcrumbs you can still build them manually.
 
 Build your breadcrumbs
 
