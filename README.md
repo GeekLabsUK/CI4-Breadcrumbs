@@ -20,7 +20,12 @@ use \Geeklabs\Breadcrumbs\Breadcrumb;
 
 ### Manual Install
 
-To install simply copy the Breadcrumbs.php file to your App\Libraries folder
+To install simply copy the Breadcrumbs.php file to your App\Libraries folder. By default CI4-Breadcrumbs uses the namespace Geeklabs\Breadcrumbs for composer installs.
+If you are manually installing please change the name space at teh top of the Breadcrumbs.php file to
+
+```
+App\Libraries
+```
 
 ### Usage
 
@@ -60,6 +65,19 @@ Then simply echo it out in your view
  ```
  
  ### Done! That simple.
+ 
+ Well almost. Now your breadcrumbs are being generated automatically based on your URI you need to make some extra conciderations when you are building out your routes. For example if you have a route like 
+ 
+ ```
+ $routes->add('admin/customers/profile', 'Controller::index')
+ '''
+ your breadcrumb will be
+ 
+ ```
+ Admin / Customer / Profile
+ ```
+ 
+ So admin and customer must also have a route set for them.
  
  ## Manual Build
  
