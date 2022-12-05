@@ -1,4 +1,4 @@
-![code score](https://www.code-inspector.com/project/16386/score/svg) ![code grade](https://www.code-inspector.com/project/16386/status/svg)
+![code score](https://api.codiga.io/project/16386/score/svg) ![code grade](https://api.codiga.io/project/16386/status/svg)
 
 # CI4-Breadcrumbs
 Simple breadcrumb library for Codeigniter 4
