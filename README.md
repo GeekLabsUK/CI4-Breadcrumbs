@@ -3,6 +3,9 @@
 # CI4-Breadcrumbs
 Simple breadcrumb library for Codeigniter 4
 
+## V3.0 Coming Soon
+With support for generating breadcrumbs for the major css frame works.
+
 ## V2.0 Released
 You now have the options of either manually building your breadcrumbs or using the auto builder. The auto builder takes your URI string and breaks it down into a bootstrap breadcrumb.
 
