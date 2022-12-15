@@ -25,6 +25,7 @@ class Breadcrumb
     private $breadcrumbs = array();
     private $tags;
     private $URI;
+    private $clickable;
 
     public function __construct()
     {
