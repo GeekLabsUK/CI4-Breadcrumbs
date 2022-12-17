@@ -18,7 +18,7 @@
  */
 
 
-namespace App\Modules\Breadcrumbs;
+namespace Geeklabs\Breadcrumbs\Core;
 
 class Breadcrumbs
 {

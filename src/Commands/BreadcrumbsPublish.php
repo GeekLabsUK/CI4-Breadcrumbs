@@ -95,7 +95,7 @@ class BreadcrumbsPublish extends BaseCommand
     {
         $path    = "{$this->sourcePath}/Core/Breadcrumbs.php";
         $content = file_get_contents($path);
-        $content = str_replace('namespace Geeklabs\Breadcrumbs', 'namespace Modules\Breadcrumbs', $content);
+        $content = str_replace('namespace Geeklabs\Breadcrumbs', 'namespace App\Modules\Breadcrumbs', $content);
         $this->writeFile('Modules/Breadcrumbs/Breadcrumbs.php', $content);
     }
 
