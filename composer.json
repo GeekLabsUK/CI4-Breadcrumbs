@@ -1,14 +1,32 @@
 {
-    "name": "geeklabs/breadcrumbs",
-    "type": "library",
-    "description": "Simple breadcrum library for Codeigniter 4",
-    "keywords": ["ci4","codeigniter","codeigniter 4","breadcrumbs"],
-    "homepage": "https://github.com/GeekLabsUK",
-    "license": "GPL-3.0-or-later",
-    "autoload": {
-		"psr-4": {
-			"Geeklabs\\Breadcrumbs\\": "/"
-		}
-	}
-      
+  "name": "geeklabs/breadcrumbs",
+  "type": "library",
+  "description": "Breadcrumb navigation for CodeIgniter 4",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Geeklabs",
+      "email": "geeklabsonline@gmail.com"
+    }
+  ],
+  "keywords": [
+    "breadcrumbs",
+    "CodeIgniter 4",
+    "navigation",
+    "menu"
+  ],
+  "minimum-stability": "stable",
+  "require": {
+    "php": "^8.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Geeklabs\\Breadcrumbs\\": "src/"
+    }
+  },
+  "extra": {
+    "spark-commands": [
+      "Geeklabs\\Breadcrumbs\\Commands\\BreadcrumbPublish"
+    ]
+  }
 }
