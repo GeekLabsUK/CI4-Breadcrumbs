@@ -21,7 +21,7 @@
 namespace App\Controllers;
 
 use CodeIgniter\Controller;
-use App\libraries\Breadcrumbs;
+use App\Modules\Breadcrumbs\Breadcrumbs;
 
 class Home extends Controller
 {
