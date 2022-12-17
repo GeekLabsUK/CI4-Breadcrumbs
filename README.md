@@ -1,3 +1,4 @@
+
 ![code score](https://api.codiga.io/project/16386/score/svg) ![code grade](https://api.codiga.io/project/16386/status/svg)
 
 # CI4-Breadcrumbs
@@ -6,25 +7,53 @@ Simple breadcrumb library for Codeigniter 4
 ## V3.0 Coming Soon
 With support for generating breadcrumbs for the major css frame works.
 
-## V2.0 Released
+## V2.0.3 Released
+Version 2.0.3 has had a few major changes. Mainly on how you install the library. The entire library has been re-packaged and now has support to publish the core file to your application.
+
+The publishing command will create a new directly called 'modules' within your app folder. Why 'modules' ? Because we plan on releasing several easy to install modules that can be installed and keeps your application structure neat and organised.
+
 You now have the options of either manually building your breadcrumbs or using the auto builder. The auto builder takes your URI string and breaks it down into a bootstrap breadcrumb.
+
+We have also added the option to build your breadcrumbs using the awesome HalfMoon CSS framework. More CSS frameworks will be added in V3.0
 
 ### Install Via Composer
 
 ```
 composer require geeklabs/ci4-breadcrumbs
 ```
-
-load into controller 
+Then run
 
 ```
-use \Geeklabs\Breadcrumbs\Breadcrumb;
+php spark breadcrumbs:publish
+```
+You will then be asked what css frame work you are using. Please make your selection and hit enter
+
+At the moment you have the option of Bootstrap or the awesome HalfMoon framework. More frameworks will be added in V3.0
+
+```
+What css framework are you using?:
+  [0]  Bootstrap
+  [1]  Halfmoon
+
+```
+Load into controller 
+
+```
+use  App\Modules\Breadcrumbs\Breadcrumbs;
+```
+If you dont want to publish to your project and would prefer to keep the library in your 'vendors' folder you can omit the 'php spark breadcrumbs:publish' command and use the namespace :
+
+```
+use  Geeklabs\Breadcrumbs\Core\Breadcrumbs;
 ```
 
 ### Manual Install
 
-To install simply copy the Breadcrumbs.php file to your App\Libraries folder. By default CI4-Breadcrumbs uses the namespace Geeklabs\Breadcrumbs for composer installs.
-If you are manually installing please change the name space at teh top of the Breadcrumbs.php file to
+To install simply copy the Breadcrumbs.php file in the 'src/Core' folder to your project such as App\Libraries folder. 
+
+By default CI4-Breadcrumbs uses the namespace 'Geeklabs\Breadcrumbs\Core' for composer installs.
+
+If you are manually installing please change the namespace at the top of the Breadcrumbs.php file to the location you have copied the file to. Such as :
 
 ```
 App\Libraries
@@ -144,6 +173,3 @@ class Home extends Controller{
 
 }
 ```
- 
- 
-
