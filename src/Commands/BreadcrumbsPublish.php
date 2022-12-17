@@ -46,7 +46,7 @@ class BreadcrumbsPublish extends BaseCommand
      *
      * @var string
      */
-    protected $name = 'breadcrumbs:publish';
+    protected $name = 'breadcrumbs:publish'; // php spark breadcrumbs:publish
 
     /**
      * The description of the command.
@@ -70,7 +70,8 @@ class BreadcrumbsPublish extends BaseCommand
     public function run(array $params)
     {
         $this->determineSourcePath();
-        $this->publishFile();
+        $this->publishCoreFile();
+        $this->publishConfigFile();
         CLI::write('Breadcrumb file was successfully generated.', 'green');
     }
 
@@ -91,12 +92,35 @@ class BreadcrumbsPublish extends BaseCommand
     /**
      * Publish Breadcrumbs file.
      */
-    protected function publishFile()
+    protected function publishCoreFile()
     {
         $path    = "{$this->sourcePath}/Core/Breadcrumbs.php";
         $content = file_get_contents($path);
         $content = str_replace('namespace Geeklabs\Breadcrumbs', 'namespace App\Modules\Breadcrumbs', $content);
+        $content = str_replace('use Geeklabs\Breadcrumbs\Config\Config', 'use App\Modules\Breadcrumbs\Config', $content);
         $this->writeFile('Modules/Breadcrumbs/Breadcrumbs.php', $content);
+    }
+
+    //--------------------------------------------------------------------
+    /**
+     * Publish Breadcrumbs Config file.
+     */
+    protected function publishConfigFile()
+    {
+        $path    = "{$this->sourcePath}/Config/Config.php";
+        $content = file_get_contents($path);
+        $content = str_replace('namespace Geeklabs\Breadcrumbs', 'namespace App\Modules\Breadcrumbs\Config', $content);
+        $framework = CLI::promptByKey('What css framework are you using?:', ['Bootstrap', 'Halfmoon',]);
+        if ($framework == '0') {
+            $framework = 'bootstrap';
+        } elseif ($framework == '1') {
+            $framework = 'halfmoon';
+        } else {
+            CLI::error('Invalid option selected. Bailing.');
+            exit();
+        }
+        $content = str_replace('bootstrap', $framework, $content);
+        $this->writeFile('Modules/Breadcrumbs/Config/Config.php', $content);
     }
 
     //--------------------------------------------------------------------
@@ -116,7 +140,7 @@ class BreadcrumbsPublish extends BaseCommand
         if (!is_dir($directory)) {
             mkdir($directory, 0777, true);
         }
-        if (file_exists($appPath . $path) && CLI::prompt('Breadcrumbs file already exists, do you want to replace it?', ['y', 'n']) === 'n') {
+        if (file_exists($appPath . $path) && CLI::prompt('file already exists, do you want to replace it?', ['y', 'n']) === 'n') {
             CLI::error('Cancelled');
             exit();
         }
@@ -130,7 +154,7 @@ class BreadcrumbsPublish extends BaseCommand
         $path = str_replace($appPath, '', $path);
         CLI::write(CLI::color('Created: ', 'yellow') . $path);
     }
-//--------------------------------------------------------------------
+    //--------------------------------------------------------------------
 
-   
+
 }

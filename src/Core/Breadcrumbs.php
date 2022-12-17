@@ -20,6 +20,8 @@
 
 namespace Geeklabs\Breadcrumbs\Core;
 
+use Geeklabs\Breadcrumbs\Config\Config;
+
 class Breadcrumbs
 {
 
@@ -27,6 +29,7 @@ class Breadcrumbs
     private $tags;
     private $URI;
     private $clickable;
+    public $Config;
 
     /**
      * Constructor function to initialize breadcrumb tags based on the given framework.
@@ -38,8 +41,9 @@ class Breadcrumbs
         // You now have the option to either use bootstrap braedcrumbs
         // or halfmoon framework breadcrumbs
         // set to either 'bootstrap' or 'halfmoon'
+        $this->Config = new Config();
 
-        $framework = 'halfmoon';
+        $framework = $this->Config->framework;
 
         $this->URI = service('uri');
 
