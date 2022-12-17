@@ -18,13 +18,15 @@
  */
 
 
-namespace Geeklabs\Breadcrumbs;
+namespace App\Modules\Breadcrumbs;
 
 class Breadcrumbs
 {
 
     private $breadcrumbs = array();
     private $tags;
+    private $URI;
+    private $clickable;
 
     /**
      * Constructor function to initialize breadcrumb tags based on the given framework.
