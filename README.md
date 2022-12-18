@@ -47,6 +47,7 @@ If you dont want to publish to your project and would prefer to keep the library
 use  Geeklabs\Breadcrumbs\Core\Breadcrumbs;
 ```
 
+If you dont publish to your project and are calling the library from the vendors folder you will need to modify the config file located at 'vendor/geeklabs/ci4-breadcrumbs/src/config/config.php' manually to select the correct css framework.
 
 
 ### Usage
