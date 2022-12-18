@@ -96,7 +96,7 @@ class BreadcrumbsPublish extends BaseCommand
     {
         $path    = "{$this->sourcePath}/Core/Breadcrumbs.php";
         $content = file_get_contents($path);
-        $content = str_replace('namespace Geeklabs\Breadcrumbs', 'namespace App\Modules\Breadcrumbs', $content);
+        $content = str_replace('namespace Geeklabs\Breadcrumbs\Core', 'namespace App\Modules\Breadcrumbs', $content);
         $content = str_replace('use Geeklabs\Breadcrumbs\Config\Config', 'use App\Modules\Breadcrumbs\Config\Config', $content);
         $this->writeFile('Modules/Breadcrumbs/Breadcrumbs.php', $content);
     }
@@ -109,7 +109,7 @@ class BreadcrumbsPublish extends BaseCommand
     {
         $path    = "{$this->sourcePath}/Config/Config.php";
         $content = file_get_contents($path);
-        $content = str_replace('namespace Geeklabs\Breadcrumbs', 'namespace App\Modules\Breadcrumbs\Config', $content);
+        $content = str_replace('namespace Geeklabs\Breadcrumbs\Config', 'namespace App\Modules\Breadcrumbs\Config', $content);
         $framework = CLI::promptByKey('What css framework are you using?:', ['Bootstrap', 'Halfmoon',]);
         if ($framework == '0') {
             $framework = 'bootstrap';
