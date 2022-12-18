@@ -119,7 +119,7 @@ class BreadcrumbsPublish extends BaseCommand
             CLI::error('Invalid option selected. Bailing.');
             exit();
         }
-        $content = str_replace('bootstrap', $framework, $content);
+        $content = str_replace('default', $framework, $content);
         $this->writeFile('Modules/Breadcrumbs/Config/Config.php', $content);
     }
 
