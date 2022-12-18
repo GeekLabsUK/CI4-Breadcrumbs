@@ -47,17 +47,7 @@ If you dont want to publish to your project and would prefer to keep the library
 use  Geeklabs\Breadcrumbs\Core\Breadcrumbs;
 ```
 
-### Manual Install
 
-To install simply copy the Breadcrumbs.php file in the 'src/Core' folder to your project such as App\Libraries folder. 
-
-By default CI4-Breadcrumbs uses the namespace 'Geeklabs\Breadcrumbs\Core' for composer installs.
-
-If you are manually installing please change the namespace at the top of the Breadcrumbs.php file to the location you have copied the file to. Such as :
-
-```
-App\Libraries
-```
 
 ### Usage
 
@@ -72,7 +62,9 @@ Out of the box breadcrumbs are set up using Bootstrap styles ie.
 </nav>
 ```
 
-If you want to overide these styles, add additional classes etc you can do that in the __construct function of Breadcrumbs.php
+If you want to override these styles, add additional classes etc you can do that in the __construct function of Breadcrumbs.php
+
+More CSS framework support is being added in v3.0. If you have a specific framework you want added please submit an issue and we will add it.
 
 To use the library first load it into your controller
 
@@ -148,7 +140,7 @@ Build your breadcrumbs
  namespace App\Controllers;
 
 use CodeIgniter\Controller;
-use App\libraries\Breadcrumb;
+use App\Modules\Breadcrumbs\Breadcrumbs;
 
 class Home extends Controller{
 
