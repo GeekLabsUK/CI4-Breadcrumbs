@@ -36,20 +36,22 @@ class Breadcrumbs
      */
     public function __construct()
     {
-        // ADDED SUPPORT FOR HALFMOON FRAME WORK
-        //
-        // You now have the option to either use bootstrap braedcrumbs
-        // or halfmoon framework breadcrumbs
-        // set to either 'bootstrap' or 'halfmoon'
+        // Load the config file
         $this->Config = new Config();
-
-        $framework = $this->Config->framework;
-
+        // Load the URI class
         $this->URI = service('uri');
 
-        // SHOULD THE LAST BREADCRUMB BE A CLICKABLE LINK? If SO SET TO TRUE
-        $this->clickable = true;
+        // Set the breadcrumb tags based on the framework
+        $framework = $this->Config->framework;  
 
+        // SHOULD THE LAST BREADCRUMB BE A CLICKABLE LINK? If SO SET TO TRUE
+        $this->clickable = $this->Config->clickable;
+
+        // If the framework is set to default, set it to bootstrap
+        if($framework == 'default'){
+            $framework = 'bootstrap';
+        }
+        
         if ($framework == 'bootstrap') {
             // create our bootstrap html elements
             $this->tags['navopen']  = "<nav aria-label='breadcrumb'>";
@@ -91,7 +93,11 @@ class Breadcrumbs
         ];
     }
 
-
+    /**
+     * Renders the breadcrumbs as HTML.
+     *
+     * @return string The HTML for the breadcrumb.
+     */
     public function render()
     {
         // Initialize the output with the opening tags for the navigation and list elements

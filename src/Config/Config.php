@@ -8,6 +8,8 @@ use CodeIgniter\Config\BaseConfig;
 class Config extends BaseConfig
 {
 
-    public $framework = 'bootstrap'; // bootstrap or halfmoon
+    public $framework = 'default'; // bootstrap or halfmoon
+
+    public $clickable = 'true';
 
 }
