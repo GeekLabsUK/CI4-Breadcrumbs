@@ -7,8 +7,8 @@ Simple breadcrumb library for Codeigniter 4
 ## V3.0 Coming Soon
 With support for generating breadcrumbs for the major css frame works.
 
-## V2.0.3 Released
-Version 2.0.3 has had a few major changes. Mainly on how you install the library. The entire library has been re-packaged and now has support to publish the core file to your application.
+## V2.0.8 Released
+Version 2.0.8 has had a few major changes. Mainly on how you install the library. The entire library has been re-packaged and now has support to publish the core file to your application.
 
 The publishing command will create a new directly called 'modules' within your app folder. Why 'modules' ? Because we plan on releasing several easy to install modules that can be installed and keeps your application structure neat and organised.
 
