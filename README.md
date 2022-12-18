@@ -7,8 +7,8 @@ Simple breadcrumb library for Codeigniter 4
 ## V3.0 Coming Soon
 With support for generating breadcrumbs for the major css frame works.
 
-## V2.0.3 Released
-Version 2.0.3 has had a few major changes. Mainly on how you install the library. The entire library has been re-packaged and now has support to publish the core file to your application.
+## V2.0.8 Released
+Version 2.0.8 has had a few major changes. Mainly on how you install the library. The entire library has been re-packaged and now has support to publish the core file to your application.
 
 The publishing command will create a new directly called 'modules' within your app folder. Why 'modules' ? Because we plan on releasing several easy to install modules that can be installed and keeps your application structure neat and organised.
 
@@ -47,6 +47,7 @@ If you dont want to publish to your project and would prefer to keep the library
 use  Geeklabs\Breadcrumbs\Core\Breadcrumbs;
 ```
 
+If you dont publish to your project and are calling the library from the vendors folder you will need to modify the config file located at 'vendor/geeklabs/ci4-breadcrumbs/src/config/config.php' manually to select the correct css framework.
 
 
 ### Usage
