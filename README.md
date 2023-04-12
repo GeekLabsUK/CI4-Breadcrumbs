@@ -145,20 +145,20 @@ use App\Modules\Breadcrumbs\Breadcrumbs;
 
 class Home extends Controller{
 
-    public $breadcrumb;
+    public $breadcrumbs;
 
     public function __construct()
     {        
-        $this->breadcrumb = new Breadcrumb();
+        $this->breadcrumbs = new Breadcrumbs();
     }
 
     public function index(){
 
-        $this->breadcrumb->add('Home', '/');
-        $this->breadcrumb->add('Dashboard', '/dashboard');
-        $this->breadcrumb->add('Customer', '/dashboard/customer');
+        $this->breadcrumbs->add('Home', '/');
+        $this->breadcrumbs->add('Dashboard', '/dashboard');
+        $this->breadcrumbs->add('Customer', '/dashboard/customer');
 
-        $data['breadcrumbs'] = $this->breadcrumb->render();
+        $data['breadcrumbs'] = $this->breadcrumbs->render();
 
         return view('home', $data);
 
